@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+body {
+    font-family: Nunito, sans-serif;
+    background-color: rgba(154, 196, 221, 0.534);
+    color: rgb(43, 33, 33);
+    font-weight: bold;
+}
+h1 {
+    text-align: center;
+}
+.Opisanie {
+    text-align: justify;
+    width: 70%;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+h2 {
+    text-align: center;
+    margin-top: 150px;
+}
+.Forma {
+    position: absolute;
+    top: 360px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+input {
+    background-color: #ffffff;
+    outline: none;
+    border-radius: 2px;
+    width: 300px;
+    height: 30px;
+    border: 3px solid rgb(81, 142, 173);
+    border-radius: 8px;
+    margin-left: -2px;
+    margin-top: 0px;
+}
+.Schet {
+    float: left;
+    margin-top: -2px;
+}
+.Chislo {
+    float: left;
+    margin-top: -1px;
+    margin-left: 10px;
+}
+button {
+    background-color:  rgb(255, 255, 255);
+    outline: none;
+    width: 200px;
+    height: 37px;
+    border: 3px solid rgb(81, 142, 173);
+    border-radius: 15px;
+    position: absolute;
+    top: 255px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: rgb(81, 142, 173);
+}
+.ZagSpisok {
+    margin-top: 315px;
+}
+.NullSpisok {
+    position: absolute;
+    top: 610px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
