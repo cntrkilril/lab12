@@ -14,12 +14,12 @@
         <div class="Forma">
             <form>
                 <p><label for="surname">Фамилия</label></p>
-                <p><input type="text" id="surname" v-bind:value="Familia" v-on:input="Schetchik1"></label></p>
+                <p><input type="text" id="surname" v-model="Familia" v-on:input="Schetchik1"></label></p>
                 <p><label for="name">Имя</label></p>
-                <p><input type="text" id="name" v-bind:value="Name" v-on:input="Schetchik2"></p>
+                <p><input type="text" id="name" v-model="Name" v-on:input="Schetchik2"></p>
                 <p class="Schet">Количество знаков: </p>
                 <p class="Chislo">{{ schet }}</p>
-                <button type="button" v-on:click="AddNewNote"><b>Записать</b></button>
+                <button type="button" v-on:click="AddNewNote" v-bind:class="{ ButtonDes: knopka}"><b>Записать</b></button>
             </form>
         </div>
             <h2 class="ZagSpisok">Список</h2>
