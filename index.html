@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Lab12</title>
 </head>
 <body>
-    <h1>Список студентов</h1>
-    <p class="Opisanie">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt lobortis luctus. Aliquam eu lorem massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras non feugiat lacus. Maecenas vel lectus non ex feugiat condimentum. Aenean ac tellus gravida dolor lobortis fermentum vel ut est. Fusce imperdiet risus eu diam egestas, vel fermentum diam semper. Praesent mollis neque metus, vulputate rhoncus purus lobortis eu.</p>
-    <h2>Форма</h2>
-    <div class="Forma">
-        <form>
-            <p><label for="surname">Фамилия</label></p>
-            <p><input type="text" id="surname" placeholder="Иванов"></label></p>
-            <p><label for="name">Имя</label></p>
-            <p><input type="text" id="name" placeholder="Иван"></p>
-            <p class="Schet">Количество знаков: </p>
-            <p class="Chislo">1</p>
-            <button><b>Записать</b></button>
-        </form>
+    <div id="app">
+        <h1>Список студентов</h1>
+        <p class="Opisanie">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt lobortis luctus. Aliquam eu lorem massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras non feugiat lacus. Maecenas vel lectus non ex feugiat condimentum. Aenean ac tellus gravida dolor lobortis fermentum vel ut est. Fusce imperdiet risus eu diam egestas, vel fermentum diam semper. Praesent mollis neque metus, vulputate rhoncus purus lobortis eu.</p>
+        <h2>Форма</h2>
+        <div class="Forma">
+            <form>
+                <p><label for="surname">Фамилия</label></p>
+                <p><input type="text" id="surname" v-bind:value="Familia" v-on:input="Schetchik1"></label></p>
+                <p><label for="name">Имя</label></p>
+                <p><input type="text" id="name" v-bind:value="Name" v-on:input="Schetchik2"></p>
+                <p class="Schet">Количество знаков: </p>
+                <p class="Chislo">{{ schet }}</p>
+                <button type="button" v-on:click="AddNewNote"><b>Записать</b></button>
+            </form>
+        </div>
+            <h2 class="ZagSpisok">Список</h2>
+        <p class="NullSpisok" v-show="visible">Список пуст</p>
+        <div class="Spisok">
+            <ol>
+                <li v-for="note in notes">{{ note }}</li>
+            </ol>
+        </div>
     </div>
-    <h2 class="ZagSpisok">Список</h2>
-    <p class="NullSpisok">Список пуст</p>
-</body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
 </html>
